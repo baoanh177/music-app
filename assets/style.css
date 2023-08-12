@@ -1,0 +1,183 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+img {
+    object-fit: cover;
+}
+
+.title {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing {
+    font-size: 14px;
+    color: red;
+}
+
+.title .music-name {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.above-screen {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    top: 0;
+    gap: 10px;
+    background-color: #fff;
+    position: fixed;
+}
+
+.below-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    overflow: auto;
+    position: sticky;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cd {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s linear;
+}
+
+#playBtn {
+    font-size: 50px;
+    color: orangered;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 260px;
+    height: 4px;
+    background-color: #ddd;
+    margin-bottom: 28px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 4px;
+    background-color: orange;
+}
+
+.list-icon {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    gap: 30px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.list-music {
+    margin-top: 320px;
+    width: 90%;
+    transition: all 0.3s linear;
+    position: relative;
+    z-index: -1;
+}
+
+.music {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.music .music-name {
+    font-weight: bold;
+}
+
+.music .singer-name {
+    font-size: 12px;
+    color: #666;
+}
+
+.music .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.content-box {
+    display: flex;
+}
+
+.content {
+    width: 180px;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cd-min {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.active {
+    color: orangered;
+}
+
+.active-song,
+.active-song .singer-name  {
+    background-color: orangered;
+    color: #fff;
+
+}
+
+#playlist-slide {
+    position: absolute;
+    bottom: -12px;
+    display: inline-block;
+    background-color: #fff;
+    outline: 1px solid #ccc;
+    border-radius: 50%;
+    transition: transform 0.3s linear;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.pgup {
+    position: fixed;
+    top: 60%;
+    right: 5px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
