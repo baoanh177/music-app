@@ -10,6 +10,10 @@ img {
     object-fit: cover;
 }
 
+i {
+    cursor: pointer;
+}
+
 .title {
     margin-top: 20px;
     display: flex;
@@ -66,7 +70,7 @@ img {
 }
 
 #playBtn {
-    font-size: 50px;
+    font-size: 45px;
     color: orangered;
 }
 
@@ -97,7 +101,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .list-music {
-    margin-top: 320px;
+    margin-top: 300px;
     width: 90%;
     transition: all 0.3s linear;
     position: relative;
@@ -106,6 +110,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .music {
     display: flex;
+    align-items: flex-start;
     justify-content: space-around;
     background-color: #fff;
     padding: 12px;
@@ -159,11 +164,16 @@ input[type=range]::-webkit-slider-thumb {
 
 #playlist-slide {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: -12px;
-    display: inline-block;
     background-color: #fff;
     outline: 1px solid #ccc;
     border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
     transition: transform 0.3s linear;
 }
 
@@ -173,11 +183,51 @@ input[type=range]::-webkit-slider-thumb {
 
 .pgup {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 60%;
     right: 5px;
-    background-color: #eee;
-    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
     border-radius: 50%;
-    cursor: pointer;
+    border: 1px solid #ddd;
 }
 
+.pgup i {
+    rotate: 180deg;
+}
+
+.createBtn {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 999;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    padding: 3px 10px;
+    border: 1px solid #aaa;
+}
+
+.options {
+    position: relative;
+}
+
+.delete {
+    display: none;
+    cursor: pointer;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    padding: 3px 10px;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+.delete:hover {
+    background-color: #eee;
+}

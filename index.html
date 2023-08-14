@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./assets/img/amee.webp" type="image/x-icon">
     <title>Music app</title>
 </head>
 
 <body>
+    <a href="create.html" class="createBtn">Thêm</a>
     <div class="below-screen">
         <div class="above-screen">
             <div class="title">
@@ -22,17 +24,24 @@
             </div>
             <img src="assets/img/anhdaonhon-mck.png" alt="" class="cd">
             <div class="list-icon">
-                <span id="replay" class="material-symbols-outlined icon"></span>
-                <span id="previous" class="material-symbols-outlined icon">skip_previous</span>
-                <span id="playBtn" class="material-symbols-outlined icon">play_circle</span>
-                <span id="next" class="material-symbols-outlined icon">skip_next</span>
-                <span id="random" class="material-symbols-outlined icon">shuffle</span>
+                <i id="replay" class="fa-solid fa-rotate-right"></i>
+                <i id="previous" class="fa-solid fa-backward"></i>
+                <i id="playBtn" class="fa-regular fa-circle-play"></i>
+                <i id="next" class="fa-solid fa-forward"></i>
+                <i id="random" class="fa-solid fa-shuffle"></i>
             </div>
             <input type="range" name="" id="" value="0" step="1" min="0" max="100">
             <audio src=""></audio>
-            <span id="playlist-slide" class="material-symbols-outlined icon rotate">keyboard_double_arrow_down</span>
+            <div id="playlist-slide">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
         </div>
-        <span class="material-symbols-outlined icon pgup">expand_less</span>
+        <div class="pgup">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <form action="">
+            <input type="file" name="" id="sda">
+        </form>
         <div class="list-music">
             <div class="music">
                 <div class="content-box">
@@ -46,7 +55,7 @@
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
